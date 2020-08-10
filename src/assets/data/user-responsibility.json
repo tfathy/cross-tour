@@ -1,0 +1,65 @@
+{
+  "user": {
+    "userId": 1,
+    "username": "tarek",
+    "empId": 1,
+    "empName": "Tarek Bakr",
+    "personType": "EMP"
+  },
+  "responsibility": {
+    "respId": 1,
+    "respDesc": "Accounting",
+    "lgrId": 1,
+    "ounId": 1,
+    "ounDesc": "City Mall",
+    "lgrName": "MACS"
+  },
+  "defFunction": [
+    {
+      "funId": 1,
+      "menuId": 1,
+      "appId": 1,
+      "menuDesc": "Definitions",
+      "funDesc": "Currency",
+      "appName": "Accounting"
+    }
+  ],
+  "trnFunction": [
+    {
+      "funId": 2,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Journal Entry",
+      "appName": "Accounting"
+    }
+  ],
+  "repFunction": [
+    {
+      "funId": 3,
+      "menuId": 3,
+      "appId": 1,
+      "menuDesc": "Reports",
+      "funDesc": "Balance sheet",
+      "appName": "Accounting"
+    }
+  ],
+  "userApps":[{
+    "appId": "1",
+    "appCode": "ACC",
+    "appDesc": "Accounting",
+    "iconName": "apps-outline",
+    "appUrl": "/gl"
+  },
+    {"appId": "2",
+      "appCode": "HR",
+      "appDesc": "Human Resources",
+      "iconName": "apps-outline",
+      "appUrl": "/hr"},
+    {"appId": "3",
+      "appCode": "CRM",
+      "appDesc": "CRM",
+      "iconName": "apps-outline",
+      "appUrl": "/crm"}
+  ]
+}

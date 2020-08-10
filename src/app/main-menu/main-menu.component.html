@@ -1,0 +1,39 @@
+<ion-menu side="start" menuId="m1"   contentId="main" *ngIf="userResp" >
+  <ion-header color="primary">     
+      <ion-grid>
+        <ion-row class="ion-text-center">
+          <ion-col>
+            <div class="ion-text-center">
+               <ion-title> System Menu </ion-title>
+            </div>             
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-text-center"> 
+          <ion-col>
+            <ion-label>{{userResp.user.username}}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-text-center">
+          <ion-col>              
+            <ion-label> {{userResp.responsibility.respDesc}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>   
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle >
+        <ion-item lines="none" button routerLink="/">
+          <ion-icon name="business" slot="start"></ion-icon>
+          <ion-label>Home page</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle *ngFor="let apps of userResp.userApps">
+        <ion-item lines="none" button [routerLink]="apps.appUrl">
+          <ion-icon [name]="apps.iconName" slot="start"></ion-icon>
+          <ion-label>{{apps.appDesc}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>     
+    </ion-list>
+  </ion-content>
+</ion-menu>

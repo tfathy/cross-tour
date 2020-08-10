@@ -1,0 +1,42 @@
+{
+    "userId": 1,
+    "username": "tarek",
+    "empId": 1,
+    "empName": "Tarek Bakr",
+    "personType": "EMP",
+    "idToken": "tokeeeen",
+    "resp": [
+      {
+        "respId": 1,
+        "respDesc": "Accountant",
+        "lgrId": 1,
+        "ounId": 1,
+        "ounDesc": "MACS",
+        "lgrName": "Macs Ledger"
+      },
+      {
+        "respId": 2,
+        "respDesc": "Senior Accountant",
+        "lgrId": 1,
+        "ounId": 1,
+        "ounDesc": "MACS",
+        "lgrName": "Macs Ledger"
+      },
+      {
+        "respId": 3,
+        "respDesc": "HR Cleark",
+        "lgrId": 1,
+        "ounId": 1,
+        "ounDesc": "MACS",
+        "lgrName": "Macs Ledger"
+      },
+      {
+        "respId": 4,
+        "respDesc": "HR director",
+        "lgrId": 1,
+        "ounId": 1,
+        "ounDesc": "MACS",
+        "lgrName": "Macs Ledger"
+      }
+    ]
+  }
