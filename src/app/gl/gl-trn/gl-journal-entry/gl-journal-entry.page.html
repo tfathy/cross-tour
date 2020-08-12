@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>GL Transactions/ Journal Entry</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button
-        [defaultHref]="'/gl/tabs/gl-trn'"
-      ></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
- 
+  <ion-header *ngIf="userResp">
+    <app-primary-toolbar
+     [showHomeButton]="true" 
+     [showBackButton]="true" 
+     [backUrl]="'/gl/tabs/gl-trn'"
+     [moduleTitle]="'GL Tranactions - Journal Entry'" 
+     [opTitle]="userResp.responsibility.ounDesc">
+    </app-primary-toolbar>
+  </ion-header>
 </ion-header>
 
 <ion-content>

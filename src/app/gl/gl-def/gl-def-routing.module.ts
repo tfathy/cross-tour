@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: GlDefPage
-  }
+  },
+  {
+    path: 'gl-currency',
+    loadChildren: () => import('./gl-currency/gl-currency.module').then( m => m.GlCurrencyPageModule)
+  },
 ];
 
 @NgModule({

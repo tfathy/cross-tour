@@ -32,7 +32,6 @@ const routes: Routes = [
         loadChildren: () =>
           import('./gl-def/gl-def.module').then((m) => m.GlDefPageModule),
       },
-      
     ],
   },
 ];

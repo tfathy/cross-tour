@@ -21,7 +21,9 @@
       "appId": 1,
       "menuDesc": "Definitions",
       "funDesc": "Currency",
-      "appName": "Accounting"
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-def/gl-currency",
+      "funIcon": "laptop-outline"
     }
   ],
   "trnFunction": [
@@ -31,7 +33,99 @@
       "appId": 1,
       "menuDesc": "Transactions",
       "funDesc": "Journal Entry",
-      "appName": "Accounting"
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "create-outline"
+    },
+    {
+      "funId": 3,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "git-pull-request-outline"      
+    },
+    {
+      "funId": 4,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 5,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 6,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 7,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 8,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 9,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 10,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+    },
+    {
+      "funId": 11,
+      "menuId": 2,
+      "appId": 1,
+      "menuDesc": "Transactions",
+      "funDesc": "Import Journals",
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
     }
   ],
   "repFunction": [
@@ -41,7 +135,10 @@
       "appId": 1,
       "menuDesc": "Reports",
       "funDesc": "Balance sheet",
-      "appName": "Accounting"
+      "appName": "Accounting",
+      "funLink": "/gl/tabs/gl-trn/gl-journal-entry",
+      "funIcon": "laptop-outline"
+      
     }
   ],
   "userApps":[{

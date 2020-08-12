@@ -21,13 +21,7 @@
       </ion-grid>   
   </ion-header>
   <ion-content>
-    <ion-list>
-      <ion-menu-toggle >
-        <ion-item lines="none" button routerLink="/">
-          <ion-icon name="business" slot="start"></ion-icon>
-          <ion-label>Home page</ion-label>
-        </ion-item>
-      </ion-menu-toggle>
+    <ion-list>      
       <ion-menu-toggle *ngFor="let apps of userResp.userApps">
         <ion-item lines="none" button [routerLink]="apps.appUrl">
           <ion-icon [name]="apps.iconName" slot="start"></ion-icon>

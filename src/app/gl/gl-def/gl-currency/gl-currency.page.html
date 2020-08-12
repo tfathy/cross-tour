@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-header *ngIf="userResp">
+    <app-primary-toolbar [showHomeButton]="true" [showBackButton]="true" [backUrl]="'/gl/tabs/gl-def'"
+      [moduleTitle]="'GL Definitions - Currencies'" [opTitle]="userResp.responsibility.ounDesc">
+    </app-primary-toolbar>
+  </ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" color="primary">
+    <ion-segment-button value="friends">
+      <ion-label>Form</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      <ion-label>Table</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <form #f="ngForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="3">
+          <ion-item>
+            <ion-label position="floating">Code</ion-label>
+            <ion-input [(ngModel)]="curCode" name="curcode" #curCodeAttr="ngModel"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-lg="3">
+          <ion-item>
+            <ion-label position="floating">Arabic name</ion-label>
+            <ion-input [(ngModel)]="descAr" #descArAttr="ngModel" name="descar"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size-lg="3">
+          <ion-item>
+            <ion-label position="floating">English Name</ion-label>
+            <ion-input [(ngModel)]="descEn" #descEnAttr="ngModel" name="descen"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+     
+      <ion-row>
+        <ion-col size-lg="3">
+          <ion-item>
+            <ion-label position="floating">Symbole</ion-label>
+            <ion-input [(ngModel)]="symbole" #symboleAttr="ngModel" name="symbole"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size-lg="3">
+          <ion-item>
+            <ion-label position="floating">Prescioin</ion-label>
+            <ion-input [(ngModel)]="prescioin" #prescioinAttr="ngModel" name="prescioin"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+     
+      <ion-row>
+        <ion-col size-lg="3"> 
+          <ion-item>
+            <ion-label position="floating">Effective start date</ion-label>
+            <ion-datetime [(ngModel)]="startDate" #startDateAttr="ngModel" name="startdate"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col size-lg="3">
+          <ion-item>
+            <ion-label position="floating">Effective end date</ion-label>
+            <ion-datetime [(ngModel)]="endDate" #endDateAttr="ngModel" name="enddate"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>     
+
+      <ion-row>
+        <ion-col size-lg="3"> 
+          <ion-item>
+            <ion-label position="floating">Enabled</ion-label>
+            <ion-select [(ngModel)]="enabled" #enabledAttr="ngModel" name="enabled">
+              <ion-select-option value="Y">enabled</ion-select-option>
+              <ion-select-option value="N">disabled</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Record Status</ion-label>
+            <ion-input [(ngModel)]="status" #statusAttr="ngModel" name="status" disabled="true"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="4" offset-sm="4">
+            <ion-button expand="block" color="primary" (click)="onSavePress(f)"> Save </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </form>
+
+</ion-content>

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GlJournalEntryPageRoutingModule } from './gl-journal-entry-routing.module';
+import { GlCurrencyPageRoutingModule } from './gl-currency-routing.module';
 
-import { GlJournalEntryPage } from './gl-journal-entry.page';
+import { GlCurrencyPage } from './gl-currency.page';
 import { PrimaryToolbarComponent } from 'src/app/primary-toolbar/primary-toolbar.component';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { PrimaryToolbarComponent } from 'src/app/primary-toolbar/primary-toolbar
     CommonModule,
     FormsModule,
     IonicModule,
-    GlJournalEntryPageRoutingModule
+    GlCurrencyPageRoutingModule
   ],
-  declarations: [GlJournalEntryPage, PrimaryToolbarComponent]
+  declarations: [GlCurrencyPage, PrimaryToolbarComponent]
 })
-export class GlJournalEntryPageModule {}
+export class GlCurrencyPageModule {}

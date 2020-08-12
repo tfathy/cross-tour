@@ -8,6 +8,10 @@ import { Component, OnInit,  Input } from '@angular/core';
 export class PrimaryToolbarComponent implements OnInit {
  @Input() moduleTitle = 'Module title here';
   @Input() opTitle = 'Operating unit here';
+  @Input() showHomeButton = false;
+  @Input() showMainMenuButton = false;
+  @Input() showBackButton = false;
+  @Input() backUrl: string;
   constructor() { }
 
   ngOnInit() {}

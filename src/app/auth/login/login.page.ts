@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { AuthentService } from '../service/authent.service';
 import { AuthorizeService } from '../service/authorize.service';
 import { Router } from '@angular/router';
-
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -16,31 +16,40 @@ export class LoginPage implements OnInit, OnDestroy {
   userResp: IAuthent;
   authentSub: Subscription;
   userResponsibility;
-  constructor(private authentService: AuthentService, private authService: AuthorizeService, private router: Router) { }
- 
+  constructor(
+    private authentService: AuthentService,
+    private authService: AuthorizeService,
+    private router: Router,
+    private loadingCtrl: LoadingController
+  ) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+  onPasswordEntered() {
+    this.loadingCtrl
+      .create({
+        message: 'Fetching user responsibilities, please wait ...',
+      })
+      .then((loadingElement) => {
+        loadingElement.present();
+        this.authentSub = this.authentService
+          .authenticateUser('tarek', 'password')
+          .subscribe((respData) => {
+            console.log('data: ', respData);
+            this.userResp = respData;
+            loadingElement.dismiss();
+          });
+      });
   }
-  onPasswordEntered(){
-    this.authentSub = this.authentService.authenticateUser('tarek','password').subscribe(
-      respData => {
-        console.log('data: ', respData);
-        this.userResp = respData;
-      }
-    )
-  }
-  onLogin(){
-    this.authService.getUserReponsibility(1).subscribe(
-      resData => {
-        console.log(resData);
-        this.userResponsibility = resData;
-        this.router.navigateByUrl('/home');
-      }
-    );
+  onLogin() {
+    this.authService.getUserReponsibility(1).subscribe((resData) => {
+      console.log(resData);
+      this.userResponsibility = resData;
+      this.router.navigateByUrl('/home');
+    });
   }
   ngOnDestroy(): void {
-    if(this.authentSub){
-    this.authentSub.unsubscribe();
+    if (this.authentSub) {
+      this.authentSub.unsubscribe();
     }
   }
 }

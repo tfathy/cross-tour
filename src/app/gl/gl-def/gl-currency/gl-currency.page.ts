@@ -3,13 +3,21 @@ import { IUserReponsibility } from '../../../auth/model/IUserReponsibility.model
 import { AuthorizeService } from '../../../auth/service/authorize.service';
 
 @Component({
-  selector: 'app-gl-journal-entry',
-  templateUrl: './gl-journal-entry.page.html',
-  styleUrls: ['./gl-journal-entry.page.scss'],
+  selector: 'app-gl-currency',
+  templateUrl: './gl-currency.page.html',
+  styleUrls: ['./gl-currency.page.scss'],
 })
-export class GlJournalEntryPage implements OnInit {
-
+export class GlCurrencyPage implements OnInit {
   userResp: IUserReponsibility;
+  curCode;
+  descAr;
+  descEn;
+  symbole;
+  prescioin;
+  startDate;
+  endDate;
+  enabled;
+  status;
   constructor(private authorizeService: AuthorizeService) { }
 
   ngOnInit() {
@@ -22,5 +30,10 @@ export class GlJournalEntryPage implements OnInit {
       }
     );
   }
-
+  onSavePress(f){
+    console.log(f);
+  }
+  segmentChanged(e){
+    
+  }
 }

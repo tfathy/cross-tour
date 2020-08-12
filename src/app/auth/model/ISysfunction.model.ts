@@ -5,4 +5,6 @@ export interface ISysFunction{
     menuDesc: string;
     funDesc: string;
     appName: string;
+    funLink: string;
+    funIcon: string;
 }
