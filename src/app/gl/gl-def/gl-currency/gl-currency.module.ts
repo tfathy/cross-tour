@@ -7,15 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { GlCurrencyPageRoutingModule } from './gl-currency-routing.module';
 
 import { GlCurrencyPage } from './gl-currency.page';
-import { PrimaryToolbarComponent } from 'src/app/primary-toolbar/primary-toolbar.component';
+import { SharedModule } from '../../../shared/shared/shared.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GlCurrencyPageRoutingModule
+    GlCurrencyPageRoutingModule,
+    SharedModule
   ],
-  declarations: [GlCurrencyPage, PrimaryToolbarComponent]
+  declarations: [GlCurrencyPage]
 })
 export class GlCurrencyPageModule {}

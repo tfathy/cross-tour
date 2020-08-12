@@ -7,15 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { GlRepPageRoutingModule } from './gl-rep-routing.module';
 
 import { GlRepPage } from './gl-rep.page';
-import { PrimaryToolbarComponent } from 'src/app/primary-toolbar/primary-toolbar.component';
+import { SharedModule } from '../../shared/shared/shared.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GlRepPageRoutingModule
+    GlRepPageRoutingModule,
+    SharedModule
   ],
-  declarations: [GlRepPage, PrimaryToolbarComponent]
+  declarations: [GlRepPage]
 })
 export class GlRepPageModule {}

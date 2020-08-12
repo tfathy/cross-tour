@@ -7,97 +7,75 @@
 </ion-header>
 
 <ion-content>
-  <ion-segment (ionChange)="segmentChanged($event)" color="primary">
-    <ion-segment-button value="friends">
-      <ion-label>Form</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="enemies">
-      <ion-label>Table</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-  <form #f="ngForm">
-    <ion-grid>
-      <ion-row>
-        <ion-col size-lg="3">
-          <ion-item>
-            <ion-label position="floating">Code</ion-label>
-            <ion-input [(ngModel)]="curCode" name="curcode" #curCodeAttr="ngModel"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size-lg="3">
-          <ion-item>
-            <ion-label position="floating">Arabic name</ion-label>
-            <ion-input [(ngModel)]="descAr" #descArAttr="ngModel" name="descar"></ion-input>
-          </ion-item>
-        </ion-col>
-        <ion-col size-lg="3">
-          <ion-item>
-            <ion-label position="floating">English Name</ion-label>
-            <ion-input [(ngModel)]="descEn" #descEnAttr="ngModel" name="descen"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-     
-      <ion-row>
-        <ion-col size-lg="3">
-          <ion-item>
-            <ion-label position="floating">Symbole</ion-label>
-            <ion-input [(ngModel)]="symbole" #symboleAttr="ngModel" name="symbole"></ion-input>
-          </ion-item>
-        </ion-col>
-        <ion-col size-lg="3">
-          <ion-item>
-            <ion-label position="floating">Prescioin</ion-label>
-            <ion-input [(ngModel)]="prescioin" #prescioinAttr="ngModel" name="prescioin"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-     
-      <ion-row>
-        <ion-col size-lg="3"> 
-          <ion-item>
-            <ion-label position="floating">Effective start date</ion-label>
-            <ion-datetime [(ngModel)]="startDate" #startDateAttr="ngModel" name="startdate"></ion-datetime>
-          </ion-item>
-        </ion-col>
-        <ion-col size-lg="3">
-          <ion-item>
-            <ion-label position="floating">Effective end date</ion-label>
-            <ion-datetime [(ngModel)]="endDate" #endDateAttr="ngModel" name="enddate"></ion-datetime>
-          </ion-item>
-        </ion-col>
-      </ion-row>     
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button color="primary">Create</ion-button>
+    </ion-col>
 
-      <ion-row>
-        <ion-col size-lg="3"> 
-          <ion-item>
-            <ion-label position="floating">Enabled</ion-label>
-            <ion-select [(ngModel)]="enabled" #enabledAttr="ngModel" name="enabled">
-              <ion-select-option value="Y">enabled</ion-select-option>
-              <ion-select-option value="N">disabled</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-item>
-            <ion-label position="floating">Record Status</ion-label>
-            <ion-input [(ngModel)]="status" #statusAttr="ngModel" name="status" disabled="true"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Filter</ion-label>
+        <ion-input (keyup)="doFilter($event.target.value)"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
-      <ion-row>
-        <ion-col size-sm="4" offset-sm="4">
-            <ion-button expand="block" color="primary" (click)="onSavePress(f)"> Save </ion-button>
-        </ion-col>
-      </ion-row>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
-    </ion-grid>
+    <!-- curCode Column -->
+    <ng-container matColumnDef="curCode">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.curCode}} </td>
+    </ng-container>
 
-  </form>
+    <!-- descEn Column -->
+    <ng-container matColumnDef="descEn">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> English Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.descEn}} </td>
+    </ng-container>
+
+    <!-- descAr Column -->
+    <ng-container matColumnDef="descAr">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Arabic Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.descAr}} </td>
+    </ng-container>
+
+    <!-- symbole Column -->
+    <ng-container matColumnDef="symbole">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbole}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="prescioin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.prescioin}} </td>
+    </ng-container>
+    <ng-container matColumnDef="startDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Effective from </th>
+      <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+    </ng-container>
+    <ng-container matColumnDef="endDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Effective to </th>
+      <td mat-cell *matCellDef="let element"> {{element.endDate}} </td>
+    </ng-container>
+    <ng-container matColumnDef="enabled">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Enabled </th>
+      <td mat-cell *matCellDef="let element"> {{element.enabled}} </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Record Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)"
+      [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}" (mouseover)="row.hovered = true"
+      (mouseout)="row.hovered = false">
+    </tr>
+  </table>
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[ 10, 25,50]">
+  </mat-paginator>
 
 </ion-content>

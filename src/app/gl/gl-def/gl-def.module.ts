@@ -7,15 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { GlDefPageRoutingModule } from './gl-def-routing.module';
 
 import { GlDefPage } from './gl-def.page';
-import { PrimaryToolbarComponent } from 'src/app/primary-toolbar/primary-toolbar.component';
+import { SharedModule } from '../../shared/shared/shared.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GlDefPageRoutingModule
+    GlDefPageRoutingModule,
+    SharedModule
   ],
-  declarations: [GlDefPage, PrimaryToolbarComponent]
+  declarations: [GlDefPage]
 })
 export class GlDefPageModule {}

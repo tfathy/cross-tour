@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { IUserApp } from '../auth/model/IUserApp.model';
-import { AuthorizeService } from '../auth/service/authorize.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',

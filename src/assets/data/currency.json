@@ -1,0 +1,157 @@
+[
+  {
+    "curCode": "USD",
+    "descAr": "US Dollar",
+    "descEn": "US Dollar",
+    "symbole": "$",
+    "prescioin": "2",
+    "startDate": "01-01-2010",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "EUR",
+    "descAr": "Euro",
+    "descEn": "Euro",
+    "symbole": "ERU",
+    "prescioin": "2",
+    "startDate": "01-01-2012",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "EGP",
+    "descAr": "Egyptian Pound",
+    "descEn": "Egyptian Pound",
+    "symbole": "EGP",
+    "prescioin": "2",
+    "startDate": "01-01-2009",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "KWD",
+    "descAr": "Kuwait Dinar",
+    "descEn": "Kuwait Dinar",
+    "symbole": "KWD",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  }
+
+  , {
+    "curCode": "DZD",
+    "descAr": "Algerian Dinar",
+    "descEn": "Algerian Dinar",
+    "symbole": "DZD",
+    "prescioin": "2",
+    "startDate": "01-01-2018",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "ARS",
+    "descAr": "Argentine Peso",
+    "descEn": "Argentine Peso",
+    "symbole": "ARS",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "AUD",
+    "descAr": "Australian Dollar",
+    "descEn": "Australian Dollar",
+    "symbole": "AUD",
+    "prescioin": "2",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "BSD",
+    "descAr": "Bahamian Dollar",
+    "descEn": "Bahamian Dollar",
+    "symbole": "BSD",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "BHD",
+    "descAr": "Bahraini Dinar",
+    "descEn": "Bahraini Dinar",
+    "symbole": "BHD",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "BZD",
+    "descAr": "Belize Dollar",
+    "descEn": "Belize Dollar",
+    "symbole": "BZD",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "BMD",
+    "descAr": "Bermudian Dollar",
+    "descEn": "Bermudian Dollar",
+    "symbole": "BMD",
+    "prescioin": "2",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "INR",
+    "descAr": "Indian Rupee",
+    "descEn": "Indian Rupee",
+    "symbole": "INR",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "BOB",
+    "descAr": "Boliviano",
+    "descEn": "Boliviano",
+    "symbole": "BOB",
+    "prescioin": "3",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  },
+  {
+    "curCode": "CAD",
+    "descAr": "Canadian Dollar",
+    "descEn": "Canadian Dollar",
+    "symbole": "CAD",
+    "prescioin": "2",
+    "startDate": "01-01-2013",
+    "endDate": "",
+    "enabled": "Y",
+    "status": "E"
+  }
+]

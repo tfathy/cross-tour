@@ -7,15 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { GlTrnPageRoutingModule } from './gl-trn-routing.module';
 
 import { GlTrnPage } from './gl-trn.page';
-import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.component';
+import { SharedModule } from '../../shared/shared/shared.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GlTrnPageRoutingModule
+    GlTrnPageRoutingModule,
+    SharedModule
   ],
-  declarations: [GlTrnPage, PrimaryToolbarComponent]
+  declarations: [GlTrnPage]
 })
 export class GlTrnPageModule {}

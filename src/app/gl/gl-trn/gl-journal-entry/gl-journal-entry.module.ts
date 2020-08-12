@@ -7,15 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { GlJournalEntryPageRoutingModule } from './gl-journal-entry-routing.module';
 
 import { GlJournalEntryPage } from './gl-journal-entry.page';
-import { PrimaryToolbarComponent } from 'src/app/primary-toolbar/primary-toolbar.component';
+
+import { SharedModule } from '../../../shared/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GlJournalEntryPageRoutingModule
+    GlJournalEntryPageRoutingModule,
+    SharedModule
   ],
-  declarations: [GlJournalEntryPage, PrimaryToolbarComponent]
+  declarations: [GlJournalEntryPage]
 })
 export class GlJournalEntryPageModule {}
