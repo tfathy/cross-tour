@@ -8,6 +8,7 @@ import { GlRepPageRoutingModule } from './gl-rep-routing.module';
 
 import { GlRepPage } from './gl-rep.page';
 import { SharedModule } from '../../shared/shared/shared.module';
+import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.component';
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { SharedModule } from '../../shared/shared/shared.module';
     GlRepPageRoutingModule,
     SharedModule
   ],
-  declarations: [GlRepPage]
+  declarations: [GlRepPage, PrimaryToolbarComponent]
 })
 export class GlRepPageModule {}
