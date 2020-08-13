@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>
-      Home
-    </ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
+  <ion-toolbar color="primary" *ngIf="userResp">
+    <app-primary-toolbar
+    [showHomeButton]="false"  
+    [showMainMenuButton]="true"
+    [moduleTitle]="'Home '" 
+    [opTitle]="userResp.responsibility.ounDesc">
+   </app-primary-toolbar>  
   </ion-toolbar>
 </ion-header>
 

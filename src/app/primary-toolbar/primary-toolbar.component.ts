@@ -1,4 +1,6 @@
 import { Component, OnInit,  Input } from '@angular/core';
+import { IUserReponsibility } from '../auth/model/IUserReponsibility.model';
+import { AuthorizeService } from '../auth/service/authorize.service';
 
 @Component({
   selector: 'app-primary-toolbar',
@@ -12,8 +14,19 @@ export class PrimaryToolbarComponent implements OnInit {
   @Input() showMainMenuButton = false;
   @Input() showBackButton = false;
   @Input() backUrl: string;
-  constructor() { }
 
-  ngOnInit() {}
+  userResp: IUserReponsibility;
+  constructor(private authorizeService: AuthorizeService) { }
+  
+  ngOnInit() {
+    this.authorizeService.getUserReponsibility(1).subscribe(
+      data => {
+        if (data) {
+          this.userResp = data;
+        }
+        console.log('userApps = ', this.userResp);
+      }
+    );
+  }
 
 }

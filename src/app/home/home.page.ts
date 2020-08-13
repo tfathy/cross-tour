@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IUserReponsibility } from '../auth/model/IUserReponsibility.model';
+import { AuthorizeService } from '../auth/service/authorize.service';
 
 
 @Component({
@@ -6,8 +8,19 @@ import { Component } from '@angular/core';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage  {
+export class HomePage implements OnInit {
+  userResp: IUserReponsibility;
+  constructor(private authorizeService: AuthorizeService) {}
 
-  constructor() {}
 
+  ngOnInit() {
+    this.authorizeService.getUserReponsibility(1).subscribe(
+      data => {
+        if (data) {
+          this.userResp = data;
+        }
+        console.log('userApps = ', this.userResp);
+      }
+    );
+  }
 }
