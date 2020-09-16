@@ -8,7 +8,8 @@ import { GlTrnPageRoutingModule } from './gl-trn-routing.module';
 
 import { GlTrnPage } from './gl-trn.page';
 import { SharedModule } from '../../shared/shared/shared.module';
-import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.component';
+
+
 
 
 @NgModule({
@@ -19,6 +20,6 @@ import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.c
     GlTrnPageRoutingModule,
     SharedModule
   ],
-  declarations: [GlTrnPage, PrimaryToolbarComponent]
+  declarations: [GlTrnPage]
 })
 export class GlTrnPageModule {}

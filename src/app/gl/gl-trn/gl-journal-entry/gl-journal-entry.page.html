@@ -2,11 +2,14 @@
   <ion-header *ngIf="userResp">
     <app-primary-toolbar
      [showHomeButton]="true" 
-     [showBackButton]="true" 
+     [showBackButton]="false" 
      [backUrl]="'/gl/tabs/gl-trn'"
      [moduleTitle]="'GL Tranactions - Journal Entry'" 
      [opTitle]="userResp.responsibility.ounDesc">
     </app-primary-toolbar>
+    <ion-buttons>
+      <ion-back-button text="back"></ion-back-button>
+    </ion-buttons>
   </ion-header>
 </ion-header>
 

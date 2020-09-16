@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { GlDefPage } from './gl-def.page';
+import { AuthGuard } from '../../guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'gl-currency',
-    loadChildren: () => import('./gl-currency/gl-currency.module').then( m => m.GlCurrencyPageModule)
+    loadChildren: () => import('./gl-currency/gl-currency.module').then( m => m.GlCurrencyPageModule), canLoad: [AuthGuard]
   },
 ];
 

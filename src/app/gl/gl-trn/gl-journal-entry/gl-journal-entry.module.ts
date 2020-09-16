@@ -9,7 +9,7 @@ import { GlJournalEntryPageRoutingModule } from './gl-journal-entry-routing.modu
 import { GlJournalEntryPage } from './gl-journal-entry.page';
 
 import { SharedModule } from '../../../shared/shared/shared.module';
-import { PrimaryToolbarComponent } from '../../../primary-toolbar/primary-toolbar.component';
+
 
 @NgModule({
   imports: [
@@ -19,6 +19,6 @@ import { PrimaryToolbarComponent } from '../../../primary-toolbar/primary-toolba
     GlJournalEntryPageRoutingModule,
     SharedModule
   ],
-  declarations: [GlJournalEntryPage, PrimaryToolbarComponent]
+  declarations: [GlJournalEntryPage]
 })
 export class GlJournalEntryPageModule {}

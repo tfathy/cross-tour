@@ -8,7 +8,8 @@ import { GlDefPageRoutingModule } from './gl-def-routing.module';
 
 import { GlDefPage } from './gl-def.page';
 import { SharedModule } from '../../shared/shared/shared.module';
-import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.component';
+
+import { GlPageModule } from '../gl.module';
 
 
 @NgModule({
@@ -19,6 +20,6 @@ import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.c
     GlDefPageRoutingModule,
     SharedModule
   ],
-  declarations: [GlDefPage, PrimaryToolbarComponent]
+  declarations: [GlDefPage]
 })
 export class GlDefPageModule {}

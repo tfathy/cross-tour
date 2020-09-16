@@ -9,6 +9,7 @@ import { GlCurrencyPageRoutingModule } from './gl-currency-routing.module';
 import { GlCurrencyPage } from './gl-currency.page';
 import { SharedModule } from '../../../shared/shared/shared.module';
 import { PrimaryToolbarComponent } from '../../../primary-toolbar/primary-toolbar.component';
+import { GlPageModule } from '../../gl.module';
 
 
 @NgModule({
@@ -19,6 +20,6 @@ import { PrimaryToolbarComponent } from '../../../primary-toolbar/primary-toolba
     GlCurrencyPageRoutingModule,
     SharedModule
   ],
-  declarations: [GlCurrencyPage, PrimaryToolbarComponent]
+  declarations: [GlCurrencyPage]
 })
 export class GlCurrencyPageModule {}

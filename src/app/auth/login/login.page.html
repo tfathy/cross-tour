@@ -15,25 +15,21 @@
               <ion-input type="email" name="email" required #emailAddress="ngModel" ngModel  ></ion-input>
             
             </ion-item>
-            <ion-item *ngIf="!emailAddress.valid && emailAddress.touched" lines="none">
-              <ion-label class="--ion-color-danger" >enter email address</ion-label>
-            </ion-item>
+           
             <ion-item>
               <ion-label position="floating"> Password</ion-label>
               <ion-input type="password" (change)="onPasswordEntered()" ngModel name="password" required #userPassword="ngModel"
               minlength="6"
               ></ion-input>
             </ion-item>
-            <ion-item *ngIf="!userPassword.valid && userPassword.touched" lines="none">
-              <ion-label class="--ion-color-danger">Enter a valid password</ion-label>
-            </ion-item>
+           
             <ion-item>
               <ion-label position="floating">Select One Responsibility</ion-label>
               <ion-select *ngIf="userResp" required #reponsibility>
               <ion-select-option  *ngFor="let r of userResp.resp" value="r.respId">{{r.respDesc}}</ion-select-option>             
-            </ion-select>
-            
+            </ion-select>            
             </ion-item>
+
           </ion-list>
         </ion-col>
       </ion-row>

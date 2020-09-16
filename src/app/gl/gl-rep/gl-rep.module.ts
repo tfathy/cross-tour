@@ -8,7 +8,8 @@ import { GlRepPageRoutingModule } from './gl-rep-routing.module';
 
 import { GlRepPage } from './gl-rep.page';
 import { SharedModule } from '../../shared/shared/shared.module';
-import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.component';
+
+
 
 
 @NgModule({
@@ -17,8 +18,7 @@ import { PrimaryToolbarComponent } from '../../primary-toolbar/primary-toolbar.c
     FormsModule,
     IonicModule,
     GlRepPageRoutingModule,
-    SharedModule
-  ],
-  declarations: [GlRepPage, PrimaryToolbarComponent]
+    SharedModule],
+  declarations: [GlRepPage]
 })
 export class GlRepPageModule {}

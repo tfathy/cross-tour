@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { PrimaryToolbarComponent } from '../primary-toolbar/primary-toolbar.component';
+
+
+import { SharedModule } from '../shared/shared/shared.module';
 
 
 @NgModule({
@@ -13,8 +15,9 @@ import { PrimaryToolbarComponent } from '../primary-toolbar/primary-toolbar.comp
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SharedModule
   ],
-  declarations: [HomePage, PrimaryToolbarComponent]
+  declarations: [HomePage]
 })
 export class HomePageModule {}
